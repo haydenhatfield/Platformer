@@ -18,7 +18,7 @@ bg_asset = RectangleAsset(SCREEN_WIDTH, SCREEN_HEIGHT, noline, black)
 bg = Sprite(bg_asset, (0,0))
 
 RedS = ImageAsset("RedScaffolding.png")
-Sprite(RedS, (0, 300))
+Sprite(RedS, (0, 500))
 
 
 myapp = App(SCREEN_WIDTH, SCREEN_HEIGHT)
