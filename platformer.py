@@ -11,18 +11,14 @@ from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Fra
 SCREEN_WIDTH = 640
 SCREEN_HEIGHT = 480
 
-
-
-
-RedS = ImageAsset("RedScaffolding.png", Frame(227,0,292-227,125), 4, 'vertical')
-Sprite(RedS, (0, 0))
-
 # Background
 black = Color(0, 1)
 noline = LineStyle(0, black)
 bg_asset = RectangleAsset(SCREEN_WIDTH, SCREEN_HEIGHT, noline, black)
 bg = Sprite(bg_asset, (0,0))
 
+RedS = ImageAsset("RedScaffolding.png")
+Sprite(RedS, (0, 0))
 
 
 myapp = App(SCREEN_WIDTH, SCREEN_HEIGHT)
