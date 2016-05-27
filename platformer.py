@@ -17,7 +17,7 @@ noline = LineStyle(0, black)
 bg_asset = RectangleAsset(SCREEN_WIDTH, SCREEN_HEIGHT, noline, black)
 bg = Sprite(bg_asset, (0,0))
 
-RedS = ImageAsset("RedScaffolding.psd", Frame(227,0,292-227,125), 4, 'vertical')
+RedS = ImageAsset("RedScaffolding.png", Frame(227,0,292-227,125), 4, 'vertical')
 Sprite(RedS, (0, 0))
 
 
