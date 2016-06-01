@@ -18,10 +18,10 @@ bg_asset = RectangleAsset(SCREEN_WIDTH, SCREEN_HEIGHT, noline, black)
 bg = Sprite(bg_asset, (0,0))
 
 class Player(Sprite):
-    RedS = ImageAsset(".png",
-    Frame(2,0,3,6))
-    "sprtie position"
-    Sprite(RedS, (0, 464))
+    TT = ImageAsset("TestTemplate.png",
+    Frame(0,0,16,16))
+    "Frame(x, y, )"
+    Sprite(TT, (0, 464))
 
 
 myapp = App(SCREEN_WIDTH, SCREEN_HEIGHT)
