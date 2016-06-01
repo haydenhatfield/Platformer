@@ -19,7 +19,7 @@ bg = Sprite(bg_asset, (0,0))
 
 class Player(Sprite):
     RedS = ImageAsset("RedScaffolding.png"
-    Frame(2,0,3,6), 4)
+    Frame(2,0,3,6))
     "sprtie position"
     Sprite(RedS, (0, 464))
 
