@@ -20,7 +20,7 @@ bg = Sprite(bg_asset, (0,0))
 class Player(Sprite):
     RedS = ImageAsset("RedScaffolding.png")
     "This line specifies a rectanglar section of the image that is to be used in game"
-    Frame(227,0,292-227,125), 4, 'vertical')
+    Frame(2,0,3,6), 4, 'vertical')
     "sprtie position"
     Sprite(RedS, (0, 464))
 
