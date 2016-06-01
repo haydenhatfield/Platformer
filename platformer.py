@@ -18,7 +18,7 @@ bg_asset = RectangleAsset(SCREEN_WIDTH, SCREEN_HEIGHT, noline, black)
 bg = Sprite(bg_asset, (0,0))
 
 class Player(Sprite):
-    RedS = ImageAsset("RedScaffolding.png"
+    RedS = ImageAsset(".png",
     Frame(2,0,3,6))
     "sprtie position"
     Sprite(RedS, (0, 464))
