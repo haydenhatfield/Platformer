@@ -17,8 +17,10 @@ noline = LineStyle(0, black)
 bg_asset = RectangleAsset(SCREEN_WIDTH, SCREEN_HEIGHT, noline, black)
 bg = Sprite(bg_asset, (0,0))
 
-RedS = ImageAsset("RedScaffolding.png")
-Sprite(RedS, (0, 464))
+class Player(Sprite):
+    RedS = ImageAsset("RedScaffolding.png")
+    Frame(227,0,292-227,125), 4, 'vertical')
+    Sprite(RedS, (0, 464))
 
 
 myapp = App(SCREEN_WIDTH, SCREEN_HEIGHT)
