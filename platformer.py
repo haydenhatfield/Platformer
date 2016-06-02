@@ -23,8 +23,8 @@ class Player(Sprite):
 
     def __init__(self, position):
         super().__init__(Player.TT, position)
-        Platformer.listenKeyEvent("keypress", "d", self.moveRight)
-        Platformer.listenKeyEvent("keypress", "a", self.moveLeft)
+        Platformer.listenKeyEvent("keydown", "d", self.moveRight)
+        Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
         self.fxcenter = self.fycenter = 0.5
         
     def step(self):
@@ -42,6 +42,7 @@ class Player(Sprite):
         """
 
     def moveRight(self, event):
+        print("right")
         self.x += 1
 
     def moveLeft(self, event):
