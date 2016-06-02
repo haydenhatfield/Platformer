@@ -18,8 +18,8 @@ bg_asset = RectangleAsset(SCREEN_WIDTH, SCREEN_HEIGHT, noline, black)
 bg = Sprite(bg_asset, (0,0))
 
 class Player(Sprite):
-    TT = ImageAsset("TestTemplate.png",
-    Frame(0,0,16,16))
+    TT = ImageAsset("PlayerTemplate.png",
+    Frame(0,0,15,15))
     "Frame(x, y, )"
     Sprite(TT, (0, 464))
 
