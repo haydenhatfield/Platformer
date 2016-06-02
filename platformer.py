@@ -28,7 +28,7 @@ class Player(Sprite):
         self.fxcenter = self.fycenter = 0.5
         
     def step(self):
-        pass
+        self.y += 1
         """
         self.x += self.vx
         self.y += self.vy
