@@ -22,7 +22,7 @@ class Player(Sprite):
     Frame(0,0,17,33))
     Sprite(TT, (0, 200))
  
-     def __init__(self, position):
+    def __init__(self, position):
         super().__init__(Player.asset, position)
         Platformer.listenKeyEvent("Right", "D", self.moveRight)
         Platformer.listenKeyEvent("Left", "A", self.moveLeft)
