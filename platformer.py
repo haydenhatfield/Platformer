@@ -24,14 +24,39 @@ class Player(Sprite):
  
      def __init__(self, position):
         super().__init__(Player.asset, position)
-        self.vx = 1
-        self.vy = 1
-        self.thrustframe = 1
-        SpaceGame.listenKeyEvent("Right", "D", self.thrustOn)
-        SpaceGame.listenKeyEvent("Left", "A", self.thrustOff)
+        Platformer.listenKeyEvent("Right", "D", self.moveRight)
+        Platformer.listenKeyEvent("Left", "A", self.moveLeft)
         self.fxcenter = self.fycenter = 0.5
+        
+    def step(self):
+        pass
+        """
+        self.x += self.vx
+        self.y += self.vy
+        if self.movement == 1:
+            self.setImage(self.moveframe)
+            self.thrustframe += 1
+            if self.movementframe == 4:
+                self.movementframe = 1
+        else:
+            self.setImage(0)
+        """
 
+    def moveRight(self, event):
+        self.x += 1
 
+    def moveLeft(self, event):
+        self.x -= 1
 
-myapp = App(SCREEN_WIDTH, SCREEN_HEIGHT)
+class Platformer(App):
+    
+    def __init__(self, width, height):
+        super().__init__(width, height)
+        self.p = Player((40,40))
+        
+    def step(self):
+        self.p.step()
+    
+    
+myapp = Platformer(SCREEN_WIDTH, SCREEN_HEIGHT)
 myapp.run()
