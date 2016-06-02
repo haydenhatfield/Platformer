@@ -42,7 +42,6 @@ class Player(Sprite):
         """
 
     def moveRight(self, event):
-        print("right")
         self.x += 1
 
     def moveLeft(self, event):
