@@ -26,6 +26,7 @@ class Player(Sprite):
         Platformer.listenKeyEvent("keydown", "d", self.moveRight)
         Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
         self.fxcenter = self.fycenter = 0.5
+        self.xscale = self.yscale = 10
         self.imagecount = 0
         
     def step(self):
