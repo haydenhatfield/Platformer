@@ -19,9 +19,9 @@ bg = Sprite(bg_asset, (0,0))
 
 class Player(Sprite):
     TT = ImageAsset("PlayerTemplate.png",
-    Frame(0,0,16,32))
+    Frame(0,0,17,33))
     TT = ImageAsset("PlayerTemplate.png",
-    Frame(18,0,32,64))
+    Frame(19,0,17,33))
     Sprite(TT, (0, 300))
 
 
