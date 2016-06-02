@@ -19,9 +19,10 @@ bg = Sprite(bg_asset, (0,0))
 
 class Player(Sprite):
     TT = ImageAsset("PlayerTemplate.png",
-    Frame(0,0,15,15))
-    "Frame(x, y, )"
-    Sprite(TT, (0, 464))
+    Frame(0,0,17,33))
+    TT = ImageAsset("PlayerTemplate.png",
+    Frame(18,0,34,66))
+    Sprite(TT, (0, 300))
 
 
 myapp = App(SCREEN_WIDTH, SCREEN_HEIGHT)
