@@ -23,8 +23,8 @@ class Player(Sprite):
 
     def __init__(self, position):
         super().__init__(Player.TT, position)
-        Platformer.listenKeyEvent("Right", "D", self.moveRight)
-        Platformer.listenKeyEvent("Left", "A", self.moveLeft)
+        Platformer.listenKeyEvent("keydown", "D", self.moveRight)
+        Platformer.listenKeyEvent("keydown", "A", self.moveLeft)
         self.fxcenter = self.fycenter = 0.5
         
     def step(self):
