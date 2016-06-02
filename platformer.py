@@ -26,9 +26,13 @@ class Player(Sprite):
         Platformer.listenKeyEvent("keydown", "d", self.moveRight)
         Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
         self.fxcenter = self.fycenter = 0.5
+        self.imagecount = 0
         
     def step(self):
-        self.y += 1
+        self.imagecount += 1
+        if self.imagecount >=12:
+            self.imagecount = 0
+        self.setImage(self.imagecount)
         """
         self.x += self.vx
         self.y += self.vy
