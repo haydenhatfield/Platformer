@@ -23,18 +23,22 @@ class Player(Sprite):
 
     def __init__(self, position):
         super().__init__(Player.TT, position)
+        self.tickCount = 0
         Platformer.listenKeyEvent("keydown", "d", self.moveRight)
         Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
         self.fxcenter = self.fycenter = 0.5
-        self.scale  = 10
+        self.scale  = 8
         self.imagecount = 0
         
     def step(self):
-        self.imagecount += 1
-        if self.imagecount >=12:
-            self.imagecount = 0
-        self.setImage(self.imagecount)
-        """
+        self.tickCount += 1
+        if self.tickCount %5 == 0:
+            self.imagecount += 1
+            
+            if self.imagecount >=12:
+                self.imagecount = 0
+            self.setImage(self.imagecount)
+            """
         self.x += self.vx
         self.y += self.vy
         if self.movement == 1:
