@@ -21,9 +21,16 @@ class Player(Sprite):
     TT = ImageAsset("PlayerTemplate1.png",
     Frame(0,0,17,33))
     Sprite(TT, (0, 200))
-    TT = ImageAsset("PlayerTemplate1.png",
-    Frame(19,0,17,33))
-    Sprite(TT, (0, 300))
+ 
+     def __init__(self, position):
+        super().__init__(Player.asset, position)
+        self.vx = 1
+        self.vy = 1
+        self.thrustframe = 1
+        SpaceGame.listenKeyEvent("Right", "D", self.thrustOn)
+        SpaceGame.listenKeyEvent("Left", "A", self.thrustOff)
+        self.fxcenter = self.fycenter = 0.5
+
 
 
 myapp = App(SCREEN_WIDTH, SCREEN_HEIGHT)
