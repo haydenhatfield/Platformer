@@ -20,6 +20,7 @@ bg = Sprite(bg_asset, (0,0))
 class Player(Sprite):
     TT = ImageAsset("PlayerTemplate1.png",
     Frame(0,0,17,33))
+    Sprite(TT, (0, 200))
     TT = ImageAsset("PlayerTemplate1.png",
     Frame(19,0,17,33))
     Sprite(TT, (0, 300))
