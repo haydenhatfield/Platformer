@@ -36,9 +36,12 @@ class Player(Sprite):
         if self.tickCount %5 == 0:
             self.imagecount += self.AD
             
-            if self.imagecount >=12:
+            if self.imagecount >=11:
                 self.AD *= -1
             self.setImage(self.imagecount)
+            if self.imagecount == 0:
+                self.AD += 1
+                
             """
         self.x += self.vx
         self.y += self.vy
