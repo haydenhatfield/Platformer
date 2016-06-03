@@ -29,14 +29,15 @@ class Player(Sprite):
         self.fxcenter = self.fycenter = 0.5
         self.scale  = 8
         self.imagecount = 0
+        self.AD = 1
         
     def step(self):
         self.tickCount += 1
         if self.tickCount %5 == 0:
-            self.imagecount += 1
+            self.imagecount += self.AD
             
             if self.imagecount >=12:
-                self.imagecount = 0
+                self.AD *= -1
             self.setImage(self.imagecount)
             """
         self.x += self.vx
