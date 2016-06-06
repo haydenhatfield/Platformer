@@ -45,10 +45,9 @@ class Floor(Sprite):
         "self.RectangularCollisionModel()"
         
     def step(self):
-        pass
-        csprites = collidingWithSprites(Player)
+        csprites = self.collidingWithSprites(Player)
         if len(csprites) > 0:
-            print("touching")
+            
         
 
 class Player(GravitySprite):
