@@ -29,7 +29,7 @@ class GravitySprite(Sprite):
         self.mass = 1.0
         self.gravity = 1
         
-    def step(self, T, dT):
+    def step(self):
        self.x += self.vx
        self.vy += self.gravity
        self.y+= self.vy
