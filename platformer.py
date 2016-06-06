@@ -24,7 +24,7 @@ class Player(Sprite):
     def __init__(self, position):
         super().__init__(Player.TT, position)
         
-                self.mass = 30*1000
+        self.mass = 30*1000
         self.fxcenter = 0.5
         self.fycenter = 0.5
         
