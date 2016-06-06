@@ -33,6 +33,12 @@ class GravitySprite(Sprite):
        self.x += self.vx
        self.vy += self.gravity
        self.y+= self.vy
+       
+       
+class Player(GravitySprite):
+    TT = ImageAsset("TestPlatform.png",
+    Frame(10,10,18,33))
+       
 
 class Player(GravitySprite):
     TT = ImageAsset("PlayerTemplate1.png",
