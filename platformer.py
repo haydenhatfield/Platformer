@@ -37,12 +37,12 @@ class GravitySprite(Sprite):
        
 class Platform(Sprite):
     
-    def __init__(self, Player)
+    def __init__(self, Player):
         pl = ImageAsset("Floor.png",
         Frame(10, 10, 2, 2))
         self.RectangularCollisionModel()
         
-    def step(self)
+    def step(self):
         if self.collidingWith(self.Player):
             print("Colliding")
        
