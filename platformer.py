@@ -39,7 +39,7 @@ class Player(GravitySprite):
     Frame(0,0,18,33), 12, "horizontal")
 
     def __init__(self, position):
-        super().__init__(Player.TT, position)
+        super().__init__(Player.TT, position, (0, 0))
         
         self.mass = 30*1000
         self.fxcenter = 0.5
