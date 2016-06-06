@@ -23,6 +23,11 @@ class Player(Sprite):
 
     def __init__(self, position):
         super().__init__(Player.TT, position)
+        
+                self.mass = 30*1000
+        self.fxcenter = 0.5
+        self.fycenter = 0.5
+        
         self.tickCount = 0
         Platformer.listenKeyEvent("keydown", "d", self.moveRight)
         Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
@@ -60,11 +65,42 @@ class Player(Sprite):
     def moveLeft(self, event):
         self.x -= 1
 
+class GravitySprite(Sprite):
+    
+    G = 50.0
+
+    def __init__(self, asset, position, velocity, sun):
+        super().__init__(asset, position)
+        self.vx = velocity[0]
+        self.vy = velocity[1]
+        self.sun = sun
+        self.fxcenter = 0.5
+        self.fycenter = 0.5
+        self.rrate = 0.0
+        self.thrust = 0.0
+        self.mass = 1.0
+        
+    def step(self, T, dT):
+        #dt = 0.033
+        R = Vector(self.sun.x-self.x, self.sun.y-self.y)
+        #Ur = R.unit()
+        r = R.mag()
+        Ux, Uy = R.x/r, R.y/r
+        ag = GravitySprite.G*self.sun.mass/R.mag()**2
+        Agx, Agy = Ux*ag, Uy*ag
+        vx, vy = self.vx, self.vy
+        At = self.thrust/self.mass
+        dt2o2 = dT*dT*0.5
+        self.vx = self.vx + (Agx - At*math.sin(self.rotation))* dT
+        self.vy = self.vy + (Agy - At*math.cos(self.rotation))* dT
+        self.x = self.x + self.vx * dT + Agx*dt2o2
+        self.y = self.y + self.vy * dT + Agy*dt2o2
+
 class Platformer(App):
     
     def __init__(self, width, height):
         super().__init__(width, height)
-        self.p = Player((100,100))
+        self.p = Player((200,200))
         
     def step(self):
         self.p.step()
