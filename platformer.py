@@ -30,17 +30,9 @@ class GravitySprite(Sprite):
         sel.gravity = 1
         
     def step(self, T, dT):
-        #dt = 0.033
-        #Ur = R.unit()
-        r = R.mag()
-        Ux, Uy = R.x/r, R.y/r
-        ag = GravitySprite.G*self.sun.mass/R.mag()**2
-        Agx, Agy = Ux*ag, Uy*ag
-        vx, vy = self.vx, self.vy
-        At = self.thrust/self.mass
-        dt2o2 = dT*dT*0.5
-        self.vx = self.vx + (Agx - At*math.sin(self.rotation))* dT
-        self.vy = self.vy + (Agy - At*math.cos(self.rotation))* dT
+       self.x += self.vx
+       self.vy += self.gravity
+       self.y+= self.vy
 
 class Player(GravitySprite):
     TT = ImageAsset("PlayerTemplate1.png",
