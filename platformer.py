@@ -40,8 +40,8 @@ class Floor(Sprite):
     def __init__(self, Player):
         fl = ImageAsset("Floor.png",
         Frame(10, 10, 2, 2))
-        super().__init__(fl, (30, 30))
-        self.RectangularCollisionModel()
+        super().__init__(fl, (100, 100))
+        "self.RectangularCollisionModel()"
         
     def step(self):
         if self.collidingWith(self.Player):
