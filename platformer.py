@@ -54,6 +54,7 @@ class Player(GravitySprite):
         self.AD = 1
         
     def step(self):
+        super().step()
         self.tickCount += 1
         if self.tickCount %5 == 0:
             self.imagecount += self.AD
