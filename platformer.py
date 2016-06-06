@@ -45,8 +45,10 @@ class Floor(Sprite):
         "self.RectangularCollisionModel()"
         
     def step(self):
-        if self.collidingWith(self.Player):
-            print("Colliding")
+        pass
+        csprites = collidingWithSprites(Player)
+        if len(csprites) > 0:
+            print("touching")
        
 
 class Player(GravitySprite):
@@ -109,7 +111,7 @@ class Platformer(App):
         
     def step(self):
         self.p.step()
-        self.fl.step()
+        #self.fl.step()
     
     
 myapp = Platformer(SCREEN_WIDTH, SCREEN_HEIGHT)
