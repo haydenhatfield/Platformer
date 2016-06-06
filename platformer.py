@@ -104,7 +104,7 @@ class Platformer(App):
     def __init__(self, width, height):
         super().__init__(width, height)
         self.p = Player((200,200))
-        self.fl = Floor
+        self.fl = Floor((100,100))
         
     def step(self):
         self.p.step()
