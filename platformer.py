@@ -47,7 +47,7 @@ class Floor(Sprite):
     def step(self):
         csprites = self.collidingWithSprites(Player)
         if len(csprites) > 0:
-            
+            csprites[0].vy = -1
         
 
 class Player(GravitySprite):
