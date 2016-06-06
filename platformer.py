@@ -27,7 +27,7 @@ class Player(Sprite):
         Platformer.listenKeyEvent("keydown", "d", self.moveRight)
         Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
         self.fxcenter = self.fycenter = 0.5
-        self.scale  = 8
+        self.scale  = 4
         self.imagecount = 0
         self.AD = 1
         
@@ -64,7 +64,7 @@ class Platformer(App):
     
     def __init__(self, width, height):
         super().__init__(width, height)
-        self.p = Player((40,40))
+        self.p = Player((100,100))
         
     def step(self):
         self.p.step()
