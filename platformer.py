@@ -35,10 +35,11 @@ class GravitySprite(Sprite):
        self.y+= self.vy
        
        
-class Platform(Sprite):
+class Floor(Sprite):
     
     def __init__(self, Player):
-        pl = ImageAsset("Floor.png",
+        super().__init__(asset, (30, 30) )
+        ImageAsset("Floor.png",
         Frame(10, 10, 2, 2))
         self.RectangularCollisionModel()
         
@@ -103,6 +104,7 @@ class Platformer(App):
     def __init__(self, width, height):
         super().__init__(width, height)
         self.p = Player((200,200))
+        self.pl = Floor
         
     def step(self):
         self.p.step()
