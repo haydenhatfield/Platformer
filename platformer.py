@@ -36,8 +36,8 @@ class GravitySprite(Sprite):
        
        
 class Player(GravitySprite):
-    TT = ImageAsset("TestPlatform.png",
-    Frame(10,10,18,33))
+    pl = ImageAsset("TestPlatform.png",
+    Frame(1,1,2,2))
        
 
 class Player(GravitySprite):
