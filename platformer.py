@@ -49,7 +49,7 @@ class Floor(Sprite):
         csprites = collidingWithSprites(Player)
         if len(csprites) > 0:
             print("touching")
-       
+        
 
 class Player(GravitySprite):
     TT = ImageAsset("PlayerTemplate1.png",
@@ -111,7 +111,7 @@ class Platformer(App):
         
     def step(self):
         self.p.step()
-        #self.fl.step()
+        self.fl.step()
     
     
 myapp = Platformer(SCREEN_WIDTH, SCREEN_HEIGHT)
