@@ -27,7 +27,7 @@ class GravitySprite(Sprite):
         self.vx = velocity[0]
         self.vy = velocity[1]
         self.mass = 1.0
-        self.gravity = 1
+        self.gravity = 0
         
     def step(self):
        self.x += self.vx
@@ -35,7 +35,7 @@ class GravitySprite(Sprite):
        self.y+= self.vy
        
        
-class Player(GravitySprite):
+class Platform(Sprite):
     pl = ImageAsset("TestPlatform.png",
     Frame(1,1,2,2))
        
