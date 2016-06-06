@@ -36,10 +36,10 @@ class GravitySprite(Sprite):
        
        
 class Floor(Sprite):
+    fl = ImageAsset("Floor.png",
+    Frame(0, 0, 103, 20))
     
     def __init__(self, Player):
-        fl = ImageAsset("Floor.png",
-        Frame(10, 10, 8, 8))
         super().__init__(fl, (300, 100))
         "self.RectangularCollisionModel()"
         
