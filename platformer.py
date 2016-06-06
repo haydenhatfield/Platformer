@@ -27,7 +27,7 @@ class GravitySprite(Sprite):
         self.vx = velocity[0]
         self.vy = velocity[1]
         self.mass = 1.0
-        self.gravity = 0
+        self.gravity = 1
         
     def step(self):
        self.x += self.vx
@@ -36,11 +36,12 @@ class GravitySprite(Sprite):
        
        
 class Floor(Sprite):
-    fl = ImageAsset("Floor.png",
-    Frame(0, 0, 103, 20))
+
     
     def __init__(self, Player):
-        super().__init__(fl, (300, 100))
+        fl = ImageAsset("Floor.png",
+        Frame(0, 0, 103, 20))
+        super().__init__(fl, (100, 300))
         "self.RectangularCollisionModel()"
         
     def step(self):
