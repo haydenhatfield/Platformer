@@ -51,8 +51,8 @@ class Floor(Sprite):
         
 
 class Player(GravitySprite):
-    TT = ImageAsset("PlayerTemplate1.png",
-    Frame(0,0,18,33), 12, "horizontal")
+    TT = ImageAsset("PlayerTemplateScaledFixed.png",
+    Frame(0,0,64,128), 12, "horizontal")
 
     def __init__(self, position):
         super().__init__(Player.TT, position, (0, 0))
@@ -65,7 +65,7 @@ class Player(GravitySprite):
         Platformer.listenKeyEvent("keydown", "d", self.moveRight)
         Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
         self.fxcenter = self.fycenter = 0.5
-        self.scale  = 4
+        self.scale  = 1
         self.imagecount = 0
         self.AD = 1
         
