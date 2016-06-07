@@ -54,7 +54,15 @@ class FloorVertical(Floor):
 
 class Floor2(Floor):
     def __init__(self, position):
-        super().__init__(position, "Floor.png")
+        super().__init__(position, "TestPlatform.png")
+        Platformer.listenKeyEvent("keydown", "d", self.moveRight)
+        Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
+        
+    def moveRight(self, event):
+        self.x -= 1
+
+    def moveLeft(self, event):
+        self.x += 1
         
 
 class Player(GravitySprite):
