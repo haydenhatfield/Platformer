@@ -38,17 +38,18 @@ class GravitySprite(Sprite):
 class Floor(Sprite):
 
     
-    def __init__(self, Player):
-        fl = ImageAsset("Floor.png",
-        Frame(0, 0, 103, 20))
-        super().__init__(fl, (100, 300))
-        "self.RectangularCollisionModel()"
+    def __init__(self, postion, BitMap, Width, Height):
+        fl = ImageAsset(BitMap,
+        Frame(0, 0, Width, Height))
+        super().__init__(fl, postion)
         
     def step(self):
         csprites = self.collidingWithSprites(Player)
         if len(csprites) > 0:
             csprites[0].vy = -1
-        
+            
+            
+class        
 
 class Player(GravitySprite):
     TT = ImageAsset("PlayerTemplateScaledFixed.png",
