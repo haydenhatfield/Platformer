@@ -52,7 +52,7 @@ class Floor(Sprite):
 
 class Player(GravitySprite):
     TT = ImageAsset("PlayerTemplateScaledFixed.png",
-    Frame(0,0,64,128), 12, "horizontal")
+    Frame(0,0,66,128), 12, "horizontal")
 
     def __init__(self, position):
         super().__init__(Player.TT, position, (0, 0))
