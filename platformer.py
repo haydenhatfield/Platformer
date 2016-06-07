@@ -54,7 +54,7 @@ class FloorVertical(Floor):
 
 class Floor2(Floor):
     def __init__(self, position):
-        super().__init__(position, "")
+        super().__init__(position, "Floor.png")
         
 
 class Player(GravitySprite):
@@ -115,11 +115,13 @@ class Platformer(App):
         self.p = Player((200,200))
         self.fl = FloorVertical((100,300))
         self.f2 = FloorVertical((200,300))
+        self.f3 = Floor2((100, 100))
         
     def step(self):
         self.p.step()
         self.fl.step()
         self.f2.step()
+        self.f3.step()
     
     
 myapp = Platformer(SCREEN_WIDTH, SCREEN_HEIGHT)
