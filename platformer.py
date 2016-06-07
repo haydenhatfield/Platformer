@@ -38,9 +38,9 @@ class GravitySprite(Sprite):
 class Floor(Sprite):
 
     
-    def __init__(self, postion, BitMap, Width, Height):
+    def __init__(self, postion, BitMap):
         fl = ImageAsset(BitMap,
-        Frame(0, 0, Width, Height))
+        Frame(BitMap))
         super().__init__(fl, postion)
         
     def step(self):
@@ -51,6 +51,7 @@ class Floor(Sprite):
             
 class FloorVertical(Floor):
     def__init__(slef, position):
+        super().__init__(postion, "Floor.png")
 
 class Player(GravitySprite):
     TT = ImageAsset("PlayerTemplateScaledFixed.png",
