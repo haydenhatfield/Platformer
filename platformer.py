@@ -49,7 +49,8 @@ class Floor(Sprite):
             csprites[0].vy = -1
             
             
-class        
+class FloorVertical(Floor):
+    def__init__(slef, position):
 
 class Player(GravitySprite):
     TT = ImageAsset("PlayerTemplateScaledFixed.png",
