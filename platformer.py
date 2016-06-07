@@ -49,7 +49,7 @@ class Floor(Sprite):
             
             
 class FloorVertical(Floor):
-    def__init__(self, position):
+    def __init__(self, position):
         super().__init__(postion, "Floor.png")
         
 
