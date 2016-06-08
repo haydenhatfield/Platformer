@@ -103,18 +103,6 @@ class Player(GravitySprite):
             self.setImage(self.imagecount)
             if self.imagecount == 0:
                 self.AD += 1
-                
-            """
-        self.x += self.vx
-        self.y += self.vy
-        if self.movement == 1:
-            self.setImage(self.moveframe)
-            self.thrustframe += 1
-            if self.movementframe == 4:
-                self.movementframe = 1
-        else:
-            self.setImage(0)
-        """
 
     def moveRight(self, event):
         self.x += 2
