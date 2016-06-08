@@ -193,9 +193,15 @@ class Platformer(App):
     def __init__(self, width, height):
         super().__init__(width, height)
         self.p = Player((200,200))
+        self.f1 = MetalPipeHorizantal296x20((200,300))
+        self.f2 = MetalPipeHorizantal296x20((496,300))
+        self.f3 = MetalPipeHorizantal296x20((792,300))
         
     def step(self):
         self.p.step()
+        self.f1.step()
+        self.f2.step()
+        self.f3.step()
 
     
     
