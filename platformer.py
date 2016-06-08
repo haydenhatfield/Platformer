@@ -55,10 +55,10 @@ class FloorVertical(Floor):
         Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
         
     def moveRight(self, event):
-        self.x -= 1
+        self.x -= 2
 
     def moveLeft(self, event):
-        self.x += 1
+        self.x += 2
 
 class Floor2(Floor):
     def __init__(self, position):
@@ -67,10 +67,10 @@ class Floor2(Floor):
         Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
         
     def moveRight(self, event):
-        self.x -= 1
+        self.x -= 2
 
     def moveLeft(self, event):
-        self.x += 1
+        self.x += 2
         
 
 class Player(GravitySprite):
