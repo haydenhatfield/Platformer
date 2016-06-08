@@ -120,12 +120,14 @@ class Platformer(App):
         self.fl = FloorVertical((100,300))
         self.f2 = FloorVertical((400,300))
         self.f3 = Floor2((100, 100))
+        self.f4 = Floor2((600,300))
         
     def step(self):
         self.p.step()
         self.fl.step()
         self.f2.step()
         self.f3.step()
+        self.f4.step()
     
     
 myapp = Platformer(SCREEN_WIDTH, SCREEN_HEIGHT)
