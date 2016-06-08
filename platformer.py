@@ -86,7 +86,7 @@ class MetalPipeHorizantal103x20(Floor):
 
 class MetalPipeVertical20x103(Floor):
     def __init__(self, position):
-        super().__init__(position, "VerticalLinkPipe.png")
+        super().__init__(position, "MetalPipeVertical20x103.png")
         Platformer.listenKeyEvent("keydown", "d", self.moveRight)
         Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
         
@@ -98,7 +98,7 @@ class MetalPipeVertical20x103(Floor):
 
 class MetalPipeHorizantal296x20(Floor):
     def __init__(self, position):
-        super().__init__(position, "VerticalLinkPipe.png")
+        super().__init__(position, "MetalPipeHorizantal296x20.png")
         Platformer.listenKeyEvent("keydown", "d", self.moveRight)
         Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
         
@@ -110,7 +110,7 @@ class MetalPipeHorizantal296x20(Floor):
 
 class MetalPipeVertical20x296(Floor):
     def __init__(self, position):
-        super().__init__(position, "VerticalLinkPipe.png")
+        super().__init__(position, "MetalPipeVertical20x296.png")
         Platformer.listenKeyEvent("keydown", "d", self.moveRight)
         Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
         
@@ -122,7 +122,7 @@ class MetalPipeVertical20x296(Floor):
 
 class MetalPipeHorizantal72x20(Floor):
     def __init__(self, position):
-        super().__init__(position, "VerticalLinkPipe.png")
+        super().__init__(position, "MetalPipeHorizantal72x20.png")
         Platformer.listenKeyEvent("keydown", "d", self.moveRight)
         Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
         
@@ -134,7 +134,7 @@ class MetalPipeHorizantal72x20(Floor):
 
 class MetalPipeVertical20x172(Floor):
     def __init__(self, position):
-        super().__init__(position, "VerticalLinkPipe.png")
+        super().__init__(position, "MetalPipeVertical20x172.png")
         Platformer.listenKeyEvent("keydown", "d", self.moveRight)
         Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
         
@@ -193,17 +193,10 @@ class Platformer(App):
     def __init__(self, width, height):
         super().__init__(width, height)
         self.p = Player((200,200))
-        self.fl = FloorVertical((100,300))
-        self.f2 = FloorVertical((400,300))
-        self.f3 = Floor2((100, 100))
-        self.f4 = Floor2((600,300))
         
     def step(self):
         self.p.step()
-        self.fl.step()
-        self.f2.step()
-        self.f3.step()
-        self.f4.step()
+
     
     
 myapp = Platformer(SCREEN_WIDTH, SCREEN_HEIGHT)
