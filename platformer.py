@@ -80,6 +80,8 @@ class Player(GravitySprite):
     def __init__(self, position):
         super().__init__(Player.TT, position, (0, 0))
         
+
+        
         self.mass = 30*1000
         self.fxcenter = 0.5
         self.fycenter = 0.5
@@ -94,6 +96,8 @@ class Player(GravitySprite):
         
     def step(self):
         super().step()
+        
+        
         self.tickCount += 1
         if self.tickCount %5 == 0:
             self.imagecount += self.AD
