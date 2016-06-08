@@ -48,9 +48,9 @@ class Floor(Sprite):
             csprites[0].vy = -1
             
             
-class FloorVertical(Floor):
+class VerticalLinkPipe(Floor):
     def __init__(self, position):
-        super().__init__(position, "TestPlatform.png")
+        super().__init__(position, "VerticalLinkPipe.png")
         Platformer.listenKeyEvent("keydown", "d", self.moveRight)
         Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
         
@@ -60,9 +60,81 @@ class FloorVertical(Floor):
     def moveLeft(self, event):
         self.x += 2
 
-class Floor2(Floor):
+class MetalBlock20x20(Floor):
     def __init__(self, position):
-        super().__init__(position, "TestPlatform.png")
+        super().__init__(position, "MetalBlock20x20.png")
+        Platformer.listenKeyEvent("keydown", "d", self.moveRight)
+        Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
+        
+    def moveRight(self, event):
+        self.x -= 2
+
+    def moveLeft(self, event):
+        self.x += 2
+        
+class MetalPipeHorizantal103x20(Floor):
+    def __init__(self, position):
+        super().__init__(position, "MetalPipeHorizantal103x20.png")
+        Platformer.listenKeyEvent("keydown", "d", self.moveRight)
+        Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
+        
+    def moveRight(self, event):
+        self.x -= 2
+
+    def moveLeft(self, event):
+        self.x += 2
+
+class MetalPipeVertical20x103(Floor):
+    def __init__(self, position):
+        super().__init__(position, "VerticalLinkPipe.png")
+        Platformer.listenKeyEvent("keydown", "d", self.moveRight)
+        Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
+        
+    def moveRight(self, event):
+        self.x -= 2
+
+    def moveLeft(self, event):
+        self.x += 2
+
+class MetalPipeHorizantal296x20(Floor):
+    def __init__(self, position):
+        super().__init__(position, "VerticalLinkPipe.png")
+        Platformer.listenKeyEvent("keydown", "d", self.moveRight)
+        Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
+        
+    def moveRight(self, event):
+        self.x -= 2
+
+    def moveLeft(self, event):
+        self.x += 2
+
+class MetalPipeVertical20x296(Floor):
+    def __init__(self, position):
+        super().__init__(position, "VerticalLinkPipe.png")
+        Platformer.listenKeyEvent("keydown", "d", self.moveRight)
+        Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
+        
+    def moveRight(self, event):
+        self.x -= 2
+
+    def moveLeft(self, event):
+        self.x += 2
+
+class MetalPipeHorizantal72x20(Floor):
+    def __init__(self, position):
+        super().__init__(position, "VerticalLinkPipe.png")
+        Platformer.listenKeyEvent("keydown", "d", self.moveRight)
+        Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
+        
+    def moveRight(self, event):
+        self.x -= 2
+
+    def moveLeft(self, event):
+        self.x += 2
+
+class MetalPipeVertical20x172(Floor):
+    def __init__(self, position):
+        super().__init__(position, "VerticalLinkPipe.png")
         Platformer.listenKeyEvent("keydown", "d", self.moveRight)
         Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
         
