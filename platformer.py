@@ -8,8 +8,8 @@ https://github.com/HHS-IntroProgramming/Platformer
 """
 from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame
 
-SCREEN_WIDTH = 640
-SCREEN_HEIGHT = 480
+SCREEN_WIDTH = 10000
+SCREEN_HEIGHT = 800
 
 # Background
 black = Color(0, 1)
