@@ -293,7 +293,7 @@ class Platformer(App):
         self.f45 = MetalPipeHorizantal103x20((360,349))
         
         self.f46 = LavaStretched((883,360))
-        self.f47 = LavaStretched((1156,433))
+        self.f47 = LavaStretched((1156,450))
         self.f48 = LavaStretched((1430,523))
         self.f49 = LavaStretched((1704,440))
         self.f50 = LavaStretched((883,353))
