@@ -168,6 +168,20 @@ class MetalPipeVertical20x172(Floor):
     def moveLeft(self, event):
         self.x += 2
         
+        
+class LavaStretched(Floor):
+    def __init__(self, position):
+        super().__init__(position, "MetalPipeVertical20x172.png")
+        Platformer.listenKeyEvent("keydown", "d", self.moveRight)
+        Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
+        
+    def moveRight(self, event):
+        self.x -= 2
+
+    def moveLeft(self, event):
+        self.x += 2
+
+        
 
 class Player(GravitySprite):
     TT = ImageAsset("PlayerTemplateScaledFixed.png",
@@ -268,6 +282,13 @@ class Platformer(App):
         
         self.f45 = MetalPipeHorizantal103x20((360,349))
         
+        self.f46 = LavaStretched((883,353))
+        self.f47 = LavaStretched((1156,433))
+        self.f48 = LavaStretched((1430,523))
+        self.f49 = LavaStretched((1704,440))
+        self.f50 = LavaStretched((883,353))
+        self.f51 = LavaStretched((1978,443))
+        
     def step(self):
         self.p.step()
         self.f1.step()
@@ -307,6 +328,22 @@ class Platformer(App):
         self.f34.step()
         self.f35.step()
         self.f36.step()
+        self.f37.step()
+        self.f38.step()
+        self.f39.step()
+        self.f40.step()
+        self.f41.step()
+        self.f42.step()
+        self.f43.step()
+        self.f44.step()
+        self.f45.step()
+        self.f46.step()
+        self.f47.step()
+        self.f48.step()
+        self.f49.step()
+        self.f50.step()
+        self.f51.step()
+        
 
     
     
