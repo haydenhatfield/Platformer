@@ -221,6 +221,12 @@ class Platformer(App):
         self.f24 = MetalPipeVertical20x103((506,349))
         self.f25 = MetalPipeVertical20x103((589,349))
         self.f26 = MetalPipeVertical20x103((584,147))
+        self.f27 = MetalPipeVertical20x103((860,147))
+        self.f28 = MetalPipeVertical20x103((943,147))
+        self.f29 = MetalPipeVertical20x103((856,349))
+        self.f30 = MetalPipeVertical20x103((1139,350))
+        self.f31 = MetalPipeVertical20x103((1139,434))
+        self.f32 = MetalPipeVertical20x103((1413,434))
         
     def step(self):
         self.p.step()
@@ -250,6 +256,13 @@ class Platformer(App):
         self.f24.step()
         self.f25.step()
         self.f26.step()
+        self.f27.step()
+        self.f27.step()
+        self.f28.step()
+        self.f29.step()
+        self.f30.step()
+        self.f31.step()
+        self.f32.step()
 
     
     
