@@ -209,6 +209,8 @@ class Platformer(App):
         self.f14 = MetalPipeHorizantal296x20((1677,127))
         self.f15 = MetalPipeHorizantal296x20((1953,127))
         
+        self.f16 = MetalPipeVertical20x172((506,349))
+        
     def step(self):
         self.p.step()
         self.f1.step()
