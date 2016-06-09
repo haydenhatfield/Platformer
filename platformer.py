@@ -72,6 +72,18 @@ class MetalBlock20x20(Floor):
     def moveLeft(self, event):
         self.x += 2
         
+class MetalPipe166x20(Floor):
+    def __init__(self, position):
+        super().__init__(position, "MetalPipe166x20.png")
+        Platformer.listenKeyEvent("keydown", "d", self.moveRight)
+        Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
+        
+    def moveRight(self, event):
+        self.x -= 2
+
+    def moveLeft(self, event):
+        self.x += 2
+        
 class MetalPipeVertical20x72(Floor):
     def __init__(self, position):
         super().__init__(position, "MetalPipeVertical20x72.png")
@@ -253,6 +265,8 @@ class Platformer(App):
         self.f42 = MetalPipeHorizantal103x20((277,297))
         self.f43 = MetalPipeHorizantal103x20((506,433))
         self.f44 = MetalPipeHorizantal103x20((860,147))
+        
+        self.f45 = MetalPipeHorizantal103x20((360,349))
         
     def step(self):
         self.p.step()
