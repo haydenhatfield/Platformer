@@ -190,6 +190,18 @@ class LavaStretched(Floor):
     def moveLeft(self, event):
         self.x += 2
         
+class UpsidedownSpikes(Floor):
+    def __init__(self, position):
+        super().__init__(position, "UpsidedownSpikes.png")
+        Platformer.listenKeyEvent("keydown", "d", self.moveRight)
+        Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
+        
+    def moveRight(self, event):
+        self.x -= 2
+
+    def moveLeft(self, event):
+        self.x += 2
+        
         
 
 
@@ -299,6 +311,9 @@ class Platformer(App):
         self.f50 = LavaStretched((883,353))
         self.f51 = LavaStretched((1978,443))
         
+        self.f52 = UpsidedownSpikes((1013,249))
+        self.f53 = UpsidedownSpikes((1037,197))
+        
     def step(self):
         self.p.step()
         self.f1.step()
@@ -353,6 +368,8 @@ class Platformer(App):
         self.f49.step()
         self.f50.step()
         self.f51.step()
+        self.f52.step()
+        self.53.step()
         
 
     
