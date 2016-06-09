@@ -369,7 +369,7 @@ class Platformer(App):
         self.f50.step()
         self.f51.step()
         self.f52.step()
-        self.53.step()
+        self.f53.step()
         
 
     
