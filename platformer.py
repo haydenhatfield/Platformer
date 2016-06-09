@@ -162,7 +162,7 @@ class Player(GravitySprite):
         Platformer.listenKeyEvent("keydown", "d", self.moveRight)
         Platformer.listenKeyEvent("keydown", "a", self.moveLeft)
         self.fxcenter = self.fycenter = 0.5
-        self.scale  = 1
+        self.scale  = .65
         self.imagecount = 0
         self.AD = 1
         
@@ -195,13 +195,13 @@ class Platformer(App):
         self.p = Player((200,300))
         self.f1 = MetalPipeHorizantal296x20((34,199))
         self.f2 = MetalPipeHorizantal296x20((5,349))
-        self.f3 = MetalPipeHorizantal296x20((360,349))
+        self.f3 = MetalPipeHorizantal296x20((589,349))
         
     def step(self):
         self.p.step()
         self.f1.step()
         self.f2.step()
-        self.f3.step()
+        sel.f3.step()
 
     
     
